@@ -14,7 +14,7 @@
 #include <iomanip>
 #include "contact_info.class.hpp"
 
-int gl_how_many = 0;
+int contact_info::how_many = 0;
 
 contact_info	add(contact_info *all_contacts)
 {
@@ -43,8 +43,8 @@ contact_info	add(contact_info *all_contacts)
 	std::cin >> new_contact.color;
 	std::cout << "Secret: ";
 	std::cin >> new_contact.secret;
-	all_contacts[gl_how_many] = new_contact;
-	gl_how_many++;
+	all_contacts[all_contacts[0].how_many] = new_contact;
+	all_contacts[0].how_many++;
 	return (new_contact);
 }
 
@@ -82,7 +82,7 @@ void	search(contact_info *allcontacts)
 
 	i = 0;
 	std::cout << "\033[0;33m____________SEARCH_MODE____________\033[0m" << std::endl;
-	while (i < gl_how_many)
+	while (i < allcontacts[0].how_many)
 	{
 		std::cout << std::setw(10);
 		std::cout << i << "\033[0;36m |\033[0m";
@@ -105,7 +105,7 @@ void	search(contact_info *allcontacts)
 	if (isdigit(index[0]) != 0)
 	{
 		i = atoi(index);
-		if (i < gl_how_many)
+		if (i < allcontacts[0].how_many)
 			print_contact(allcontacts[i]);
 		else
 			std::cout << "Index not valid!!!!" << std::endl;
@@ -118,6 +118,7 @@ int		main ( void )
 {
 	char			buff[7];
 	int				i = 0;
+
 	contact_info	all_contacts[9];
 
 	std::cout << "\033[0;36m___________________________________" << std::endl;
@@ -128,12 +129,14 @@ int		main ( void )
 	std::cin >> buff;
 	while (strcmp(buff, "EXIT") != 0)
 	{
-		if (strcmp(buff, "ADD") == 0 && gl_how_many < 8)
-			all_contacts[gl_how_many] = add(all_contacts);
-		else if (strcmp(buff, "ADD") == 0 && gl_how_many >= 8)
+		if (strcmp(buff, "ADD") == 0 && all_contacts[0].how_many < 8)
+			all_contacts[all_contacts[0].how_many] = add(all_contacts);
+		else if (strcmp(buff, "ADD") == 0 && all_contacts[0].how_many >= 8)
 			std::cout << "Too many contacts!! To add, exit and try again!!" << std::endl;
-		else if (strcmp(buff, "SEARCH") == 0)
+		else if (strcmp(buff, "SEARCH") == 0 && all_contacts[0].how_many > 0)
 			search(all_contacts);
+		else if (strcmp(buff, "SEARCH") == 0 && all_contacts[0].how_many == 0)
+			std::cout << "You don't have any entrances in your phonebook! Use ADD to create one!" << std::endl;
 		while (buff[i] != '\0')
 		{
 			buff[i] = '\0';

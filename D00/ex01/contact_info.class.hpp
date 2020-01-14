@@ -15,6 +15,7 @@
 
 class contact_info{
 public:
+	static int	how_many;
 	char		first_name[40];
 	char		last_name[40];
 	char		nickname[40];
