@@ -18,15 +18,15 @@
 
 ZombieEvent::ZombieEvent ( void ){
 	std::cout << "\033[1;34m__________________________________" << std::endl;
-	std::cout << "       z o m b i e E v e n t" << std::endl;
-	std::cout << "__________________________________\033[0m" << std::endl;
+	std::cout << "\033[0;32m       z o m b i e E v e n t" << std::endl;
+	std::cout << "\033[1;34m__________________________________\033[0m" << std::endl;
 	this->type = "";
 	this->name = "";
 }
 
 void	ZombieEvent::setZombieType (std::string type){
 	this->type = type;
-	std::cout << "__________________________________" << std::endl;
+	std::cout << "\033[0;32m__________________________________" << std::endl;
 	std::cout << "    type just got set to " << type << std::endl;
 	std::cout << "__________________________________\033[0m" << std::endl;
 }
@@ -66,6 +66,6 @@ void	ZombieEvent::randomChump ( void ){
 
 ZombieEvent::~ZombieEvent ( void ){
 	std::cout << "\033[1;34m__________________________________" << std::endl;
-	std::cout << "   z o m b i e E v e n t OVER" << std::endl;
+	std::cout << "   z o m b i e E v e n t \033[0;32mOVER\033[1;34m" << std::endl;
 	std::cout << "__________________________________" << std::endl;
 }

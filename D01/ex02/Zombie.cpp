@@ -16,15 +16,15 @@
 
 Zombie::Zombie (std::string name, std::string type)
 {
-	std::cout << "\033[1;34m`-._,-'_`-. scary night" << std::endl;
-	std::cout << "there comes " << name << ", the " << type << " Z O M B I E" << std::endl;
+	std::cout << "\033[1;34m`-._,-'_`-. dark nebulous night" << std::endl;
+	std::cout << "there comes \033[0;32m" << name << "\033[1;34m, the \033[0;32m" << type << "\033[1;34m Z O M B I E" << std::endl;
 	this->name = name;
 	this->type = type;
 }
 
 void Zombie::announce() {
 	std::cout << "___________________________________________" << std::endl;
-	std::cout << "GROWARRRRRRRRRR! I AM THE " << this->type << " Z O M B I E, " << this->name << std::endl;
+	std::cout << "GROWARRRRRRRRRR! I AM THE \033[0;32m" << this->type << "\033[1;34m Z O M B I E, \033[0;32m" << this->name << std::endl;
 	std::cout << "                           \\" << std::endl;
 	std::cout << "\033[0;32m                                .....            " << std::endl;
 	std::cout << "                               C C  /            " << std::endl;
@@ -49,5 +49,5 @@ void Zombie::announce() {
 }
 
 Zombie::~Zombie (void){
-	std::cout << "OH NO! The sun light is out and the z o m b i e is in the ground!! `-._,-'_`-." << std::endl;
+	std::cout << "OH NO! The sun light is out and the z o m b i e \033[0;32m" << this->name << "\033[1;34m is in the ground!! `-._,-'_`-." << std::endl;
 }
