@@ -1,23 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ex04.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mcouto <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/01/14 21:35:55 by mcouto            #+#    #+#             */
-/*   Updated: 2020/01/14 21:35:56 by mcouto           ###   ########.fr       */
+/*   Created: 2020/01/15 00:37:25 by mcouto            #+#    #+#             */
+/*   Updated: 2020/01/15 00:37:26 by mcouto           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ZombieHorde.hpp"
-#include "Zombie.hpp"
 #include <iostream>
 #include <string>
 #include <iomanip>
 #include <cstdlib>
 
-int main ( void ){
-	ZombieHorde all_zombies = ZombieHorde(6);
-	all_zombies.announce();
+int main ( void ) {
+	std::string brain = "HI THIS IS BRAIN";
+	std::string& brain_ref = brain;
+	std::string *brain_pointer = &brain;
+
+	std::cout << brain_ref << std::endl;
+	std::cout << *brain_pointer << std::endl;
+	return (0);
 }
