@@ -24,13 +24,13 @@ int main ( void ){
 	zombie_night.setZombieType(type);
 	Zombie *my_zombie = zombie_night.newZombie(name);
 	my_zombie->announce();
-	delete my_zombie;
-	std::cout << "\033[0;32m_________________________" << std::endl;
-	std::cout << "Just deleted a zombie! =(" << std::endl;
-	std::cout << "_________________________" << std::endl;
 	zombie_night.randomChump();
 	zombie_night.setZombieType("C U T E");
 	zombie_night.randomChump();
 	zombie_night.setZombieType("random");
 	zombie_night.randomChump();
+	delete my_zombie;
+	std::cout << "\033[0;32m_____________________________________" << std::endl;
+	std::cout << "Just deleted the allocated zombie! =(" << std::endl;
+	std::cout << "_____________________________________" << std::endl;
 }

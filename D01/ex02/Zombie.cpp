@@ -23,7 +23,7 @@ Zombie::Zombie (std::string name, std::string type)
 }
 
 void Zombie::announce() {
-	std::cout << "___________________________________________" << std::endl;
+	std::cout << "____________________________________________________________" << std::endl;
 	std::cout << "GROWARRRRRRRRRR! I AM THE \033[0;32m" << this->type << "\033[1;34m Z O M B I E, \033[0;32m" << this->name << std::endl;
 	std::cout << "                           \\" << std::endl;
 	std::cout << "\033[0;32m                                .....            " << std::endl;
@@ -45,7 +45,7 @@ void Zombie::announce() {
 	std::cout << "                           ____\\_\\__\\_\\          " << std::endl;
 	std::cout << "                         /`   /`     o\\          " << std::endl;
 	std::cout << "                         |___ |_______|" << std::endl;
-	std::cout << "\033[1;34m___________________________________________" << std::endl;
+	std::cout << "\033[1;34m____________________________________________________________" << std::endl;
 }
 
 Zombie::~Zombie (void){
