@@ -1,17 +1,17 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   FragTrap.hpp                                       :+:      :+:    :+:   */
+/*   ClapTrap.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mcouto <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/01/17 14:42:10 by mcouto            #+#    #+#             */
-/*   Updated: 2020/01/17 14:42:11 by mcouto           ###   ########.fr       */
+/*   Created: 2020/01/17 18:17:54 by mcouto            #+#    #+#             */
+/*   Updated: 2020/01/17 18:17:55 by mcouto           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FRAGTRAP_HPP
-#define FRAGTRAP_HPP
+#ifndef CLAPTRAP_HPP
+#define CLAPTRAP_HPP
 #include <iostream>
 #include <string>
 #include <iomanip>
@@ -19,25 +19,22 @@
 #include <istream>
 #include <sstream>
 
-class FragTrap {
+class ClapTrap {
 public:
     //constructors
-    FragTrap( void );
-    FragTrap(std::string one_name);
-    FragTrap(FragTrap const &copy);
+    ClapTrap( void );
+    ClapTrap(std::string one_name);
+    ClapTrap(ClapTrap const &copy);
 
     //deconstructor
-    ~FragTrap( void );
+    ~ClapTrap( void );
 
     //assign
-    FragTrap &operator=(FragTrap const &base);
+    ClapTrap &operator=(ClapTrap const &base);
 
     //action functions
-    void rangedAttack(std::string const &target);
-    void meleeAttack(std::string const & target);
     void takeDamage(unsigned int amount);
     void beRepaired(unsigned int amount);
-    void vaulthunter_dot_exe(std::string const & target);
 
     //gets
     void get_Status( void );

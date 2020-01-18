@@ -25,7 +25,7 @@ using namespace std;
 #define print(x)  cout << x << endl;
 
 //constructors
-ScavTrap::ScavTrap( void )
+FragTrap::FragTrap( void )
 {
     srand (time(NULL));
     set_hitPoints(100);
@@ -36,10 +36,12 @@ ScavTrap::ScavTrap( void )
     set_meleeAttackDmg(30);
     set_rangedAttackDmg(20);
     set_armorDmgRed(5);
-    cout << "... l o  a d i n g ... Frag Trap created by default constructor" << endl;
+    cout << get_name() << "... l o  a d i n g ... Frag Trap created by default constructor" << endl;
 }
+
 FragTrap::FragTrap(string one_name) : _name(one_name)
 {
+    srand (time(NULL));
     _hitPoints = 100;
     _maxHitPoints = 100;
     _energyPoints = 100;
@@ -48,18 +50,18 @@ FragTrap::FragTrap(string one_name) : _name(one_name)
     _meleeAttackDmg = 30;
     _rangedAttackDmg = 20;
     _armorDmgRed = 5;
-    cout << _name << "... l o  a d i n g ... created by default constructor" << endl;
+    cout << _name << "... l o  a d i n g ... Frag Trap created by default constructor" << endl;
 }
 
 FragTrap::FragTrap(FragTrap const &copy)
 {
     *this = copy;
-    cout << _name << ". . . loading . . . created by copy constructor" << endl;
+    cout << _name << ". . . loading . . . Frag Trap created by copy constructor" << endl;
 }
 
 //deconstructor
 FragTrap::~FragTrap( void ){
-    cout << _name << "destroyed!!!!" << endl;
+    cout << "Frag Trap " << _name << " destroyed!!!!" << endl;
 }
 
 //assign
@@ -169,12 +171,16 @@ void FragTrap::beRepaired(unsigned int amount)
 void FragTrap::vaulthunter_dot_exe(std::string const &target)
 {
     string attack_name;
-    srand (time(NULL));
     int random = rand() % 5;
 
     if (this->_energyPoints < 25)
     {
         print(".... not enough energy for attack ....");
+        return ;
+    }
+    else if (this->_hitPoints == 0)
+    {
+        print(".... not enough HP for attack ....");
         return ;
     }
     this->_energyPoints -= 25;
