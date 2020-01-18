@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CMakeRunConfigurationManager" shouldGenerate="true" shouldDeleteObsolete="true">
+    <generated />
+  </component>
+  <component name="CMakeSettings">
+    <configurations>
+      <configuration PROFILE_NAME="Debug" CONFIG_NAME="Debug" />
+    </configurations>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="fa97a74d-936e-4c0a-aebb-4c455a83c552" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../D00/ex01/my_phonebook.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../D00/ex01/my_phonebook.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../D00/ex02/._19920104_091532.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../D00/ex02/._Account.class.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../D00/ex02/._tests.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../D00/ex02/Account.class.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../D00/ex02/Account.class.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../D00/ex02/Account.class.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/../D00/ex02/Account.class.hpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../D00/ex02/a.out" beforeDir="false" afterPath="$PROJECT_DIR$/../D00/ex02/a.out" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ClangdSettings">
+    <option name="formatViaClangd" value="false" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectId" id="1WXfja7LunrJFmwqLX5ruiEblbs" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="fa97a74d-936e-4c0a-aebb-4c455a83c552" name="Default Changelist" comment="" />
+      <created>1579300996963</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1579300996963</updated>
+      <workItem from="1579301001208" duration="16000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="959" y="523" key="com.intellij.ide.util.TipDialog" timestamp="1579301003505">
+      <screen x="0" y="23" width="2560" height="1337" />
+    </state>
+    <state x="959" y="523" key="com.intellij.ide.util.TipDialog/0.23.2560.1337@0.23.2560.1337" timestamp="1579301003505" />
+  </component>
+</project>
