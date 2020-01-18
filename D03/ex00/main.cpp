@@ -38,6 +38,9 @@ int main( void )
     a1.takeDamage(50);
     a1.vaulthunter_dot_exe("GREEN EVIL ROBOT");
     a1.vaulthunter_dot_exe("FIRE EVIL ROBOT");
+    a1.vaulthunter_dot_exe("GIANT HUNGRY CHOCOLATE CAKE");
+    a1.vaulthunter_dot_exe("EVIL ALIEN");
+    a1.vaulthunter_dot_exe("COLD EVIL ROBOT");
     a1.get_Status();
     a1.beRepaired(100);
     a1.get_Status();
