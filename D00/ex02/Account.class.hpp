@@ -33,7 +33,7 @@ public:
 
 
 private:
-
+	static int	how_many_checks;
 	static int	_nbAccounts;
 	static int	_totalAmount;
 	static int	_totalNbDeposits;

@@ -19,6 +19,7 @@ int Account::_nbAccounts = 0;
 int Account::_totalAmount = 0;
 int Account::_totalNbDeposits = 0;
 int Account::_totalNbWithdrawals = 0;
+int	Account::how_many_checks = 0;
 
 void print_time_stamp(void)
 {
@@ -91,6 +92,15 @@ bool Account::makeWithdrawal( int withdrawal ){
 		return 0;
 	}
 }
+
+int	Account::checkAmount( void ) const{
+	int&		ref_to_how_many = how_many_checks;
+	ref_to_how_many++;
+	print_time_stamp();
+	std::cout << "Amount:" << this->_amount <<std::endl;
+	return 0;
+}
+
 Account::~Account( void ){
 	print_time_stamp();
 	std::cout << "index:" << (this->_accountIndex) << ";";

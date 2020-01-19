@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 #include <iostream>
-#include <cstring>
+#include <string>
 #include <iomanip>
 #include "contact_info.class.hpp"
 
