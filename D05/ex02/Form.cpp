@@ -30,7 +30,6 @@ _name(copy.getName()), _isSigned(copy._isSigned), _gradeToSign(copy.getGradeToSi
 //actions
 void	Form::beSigned(Bureaucrat &check)
 {
-	check.signForm(*this);
 	if(check.getGrade() > getGradeToSign())
 		throw too_low;
 	else

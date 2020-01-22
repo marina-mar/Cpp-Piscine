@@ -19,7 +19,6 @@ int main ( void )
 	std::cout << f1;
 	std::cout << "\033[0;35m___TEST2__CAN'T_SIGN___\033[0;0m" << std::endl;
 	try {
-		b1.signForm(f1);
 		f1.beSigned(b1);
 	}
 	catch (Form::GradeTooHighException &error)
@@ -38,7 +37,6 @@ int main ( void )
 	std::cout << f1;
 	std::cout << "\033[0;35m___TEST4__CAN_SIGN___\033[0;0m" << std::endl;
 	try {
-		b2.signForm(f1);
 		f1.beSigned(b2);
 	}
 	catch (Form::GradeTooHighException &error)
