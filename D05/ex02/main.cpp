@@ -25,7 +25,7 @@ int main ( void )
 	std::cout << f1;
 	RobotomyRequestForm f2("Juan");
 	std::cout << f2;
-	ShruberryCreationForm f3("Poriar");
+	ShrubberyCreationForm f3("Poriar");
 	std::cout << f3;
 
 	std::cout << "\033[0;35m___TEST2_TRY_EXEC_WITH_NO_SIGNATURE__\033[0;0m" << std::endl;
