@@ -1,45 +1,43 @@
-#ifndef FORM_HPP
-#define FORM_HPP
+#ifndef BUREAUCRAT_HPP
+#define BUREAUCRAT_HPP
 #include <iostream>
 #include <string>
 #include <iomanip>
 #include <fstream>
 #include <istream>
 #include <sstream>
-#include "Bureaucrat.hpp"
+#include "Form.hpp"
 
 #define MAX_GRADE 1
 #define MIN_GRADE 150
 
-class Bureaucrat;
+class Form;
 
-class Form {
+class Bureaucrat {
 public:
 	//constructors
-	Form(std::string const name, int const gradeToSign, int const gradeToExecute);
-	Form( void );
-	Form(Form &copy);
+	Bureaucrat(std::string const name, int const grade);
+	Bureaucrat( void );
+	Bureaucrat(Bureaucrat &copy);
 
 	//deconstructor
-	~Form( void );
+	~Bureaucrat( void );
 
 	//assign
-	Form &operator=(Form &base);
+	Bureaucrat &operator=(Bureaucrat &base);
 
 	//actions
-	virtual void	execute(Bureaucrat const &executor) const;
-	void			beSigned(Bureaucrat &check);
+	void	signForm(Form &to_sign);
+	void	executeForm(Form const & form);
 
-	//gets
-	std::string getName( void ) const;
-	int		getGradeToSign( void ) const;
-	int		getGradeToExecute( void ) const;
-	bool	getIsSigned( void ) const;
+	//operators
+	Bureaucrat &operator+=(int const nbr);
+	Bureaucrat &operator-=(int const nbr);
 
 	//exceptions
 	class GradeTooHighException : public std::exception
 	{
-	public:
+		public:
 		//constructors
 		GradeTooHighException( void );
 		GradeTooHighException(GradeTooHighException const &copy);
@@ -53,10 +51,9 @@ public:
 		//assign
 		GradeTooHighException &operator=(GradeTooHighException const &base);
 	} too_high;
-
 	class GradeTooLowException : public std::exception
 	{
-	public:
+		public:
 		//constructors
 		GradeTooLowException( void );
 		GradeTooLowException(GradeTooLowException const &copy);
@@ -71,12 +68,18 @@ public:
 		GradeTooLowException &operator=(GradeTooLowException const &base);
 	} too_low;
 
+	//gets
+	std::string getName( void ) const;
+	int getGrade( void ) const;
+
+	//sets
+	void setGrade(int new_value);
+
+
 private:
 	const std::string	_name;
-	bool				_isSigned;
-	const int			_gradeToSign;
-	const int			_gradeToExecute;
+	int					_grade;
 };
 
-std::ostream &operator<<(std::ostream &o, Form const &say);
+std::ostream &operator<<(std::ostream &o, Bureaucrat const &say);
 #endif

@@ -27,7 +27,8 @@ public:
 	Form &operator=(Form &base);
 
 	//actions
-	void	beSigned(Bureaucrat &check);
+	void			beSigned(Bureaucrat &check);
+	virtual void	execute(Bureaucrat const &executor) const;
 
 	//gets
 	std::string getName( void ) const;

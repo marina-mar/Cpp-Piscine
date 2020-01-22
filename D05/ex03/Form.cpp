@@ -28,6 +28,14 @@ _name(copy.getName()), _isSigned(copy._isSigned), _gradeToSign(copy.getGradeToSi
 	print("Copy constructor called, Form created");
 };
 //actions
+void	Form::execute(Bureaucrat const &executor) const
+{
+	if (executor.getGrade() <= getGradeToExecute())
+		std::cout << "Execution complete by " << executor.getName() << std::endl;
+	else
+		throw too_low;
+	return ;
+}
 void	Form::beSigned(Bureaucrat &check)
 {
 	if(check.getGrade() > getGradeToSign())

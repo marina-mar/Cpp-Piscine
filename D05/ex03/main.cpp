@@ -19,12 +19,9 @@ int main ( void )
 
 	rrf = someRandomIntern.makeForm("robotomy request", "Bender");
 	std::cout << *rrf;
-	delete rrf;
 	rrf = someRandomIntern.makeForm("Shrubbery Creation", "Temper");
 	std::cout << *rrf;
-	delete rrf;
 	rrf = someRandomIntern.makeForm("PresidentialPardon", "Borocos");
 	std::cout << *rrf;
-	delete rrf;
 	std::cout << "\033[0;35m________________________________\033[0;0m" << std::endl;
 }

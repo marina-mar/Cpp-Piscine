@@ -28,7 +28,6 @@ public:
 
 	//actions
 	void			beSigned(Bureaucrat &check);
-	virtual void	execute(Bureaucrat const &wants_to_execute) const;
 
 	//gets
 	std::string getName( void ) const;
